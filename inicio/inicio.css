@@ -34,7 +34,7 @@ a {
   margin: 0 30px;
   font-size: 20px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
 }
 .header .header__nav .header__elements:after {
@@ -55,7 +55,7 @@ a {
 .article {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(2, 550px);
+  grid-template-rows: 550px 1300px 650px;
   flex-direction: column;
 }
 .article .article__section-presentation {
@@ -89,7 +89,12 @@ a {
   top: 70px;
   font-size: 25px;
   color: #3B3B3B;
-  font-weight: bolder;
+  font-weight: 700;
+}
+.article .section__description {
+  position: relative;
+  height: 550px;
+  margin: 0;
 }
 .article .section__description .section__title {
   display: inline-block;
@@ -104,15 +109,16 @@ a {
   background-color: #00004f;
   padding: 15px;
 }
-.article .section__description .section__container-how {
+.article .section__description .section__container--how, .article .section__description .section__container--made {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 20vh 30vh 30vh;
   position: relative;
   z-index: 10;
   width: 100%;
+  margin: 0 0 40px 0;
 }
-.article .section__description .section__container-how .section__title-how {
+.article .section__description .section__container--how .section__title--how, .article .section__description .section__container--how .section__title--made, .article .section__description .section__container--made .section__title--how, .article .section__description .section__container--made .section__title--made {
   display: flex;
   align-items: center;
   grid-column: 1/3;
@@ -122,16 +128,16 @@ a {
   color: #fff;
   padding-left: 20px;
 }
-.article .section__description .section__container-how .section__content-how {
+.article .section__description .section__container--how .section__content--how, .article .section__description .section__container--how .section__content--made, .article .section__description .section__container--made .section__content--how, .article .section__description .section__container--made .section__content--made {
   display: inline-block;
   margin: -2px 0 0 0;
   grid-column: 1/2;
   background-color: #fff;
   font-size: 20px;
-  padding: 40px 30px;
+  padding: 30px 40px;
   color: #000;
 }
-.article .section__description .section__container-how .section__images-content-how {
+.article .section__description .section__container--how .section__images-content--how, .article .section__description .section__container--how .section__images-content--made, .article .section__description .section__container--made .section__images-content--how, .article .section__description .section__container--made .section__images-content--made {
   display: flex;
   position: relative;
   align-self: center;
@@ -147,30 +153,19 @@ a {
   padding-bottom: 3px;
   z-index: 1;
 }
-.article .section__description .section__container-how .section__images-content-how:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 90%;
-  border-radius: 30px;
-  background-color: #19227c;
-  z-index: 10;
-}
-.article .section__description .section__container-how .section__images-content-how .section__images-container-how {
+.article .section__description .section__container--how .section__images-content--how .section__images-container--how, .article .section__description .section__container--how .section__images-content--how .section__images-container--made, .article .section__description .section__container--how .section__images-content--made .section__images-container--how, .article .section__description .section__container--how .section__images-content--made .section__images-container--made, .article .section__description .section__container--made .section__images-content--how .section__images-container--how, .article .section__description .section__container--made .section__images-content--how .section__images-container--made, .article .section__description .section__container--made .section__images-content--made .section__images-container--how, .article .section__description .section__container--made .section__images-content--made .section__images-container--made {
   display: flex;
   width: 480px;
   height: 300px;
   align-items: center;
   overflow: hidden;
   z-index: 20;
+  box-shadow: 0 3px 10px #666666;
 }
-.article .section__description .section__container-how .section__images-content-how .section__images-container-how .section__images-how {
+.article .section__description .section__container--how .section__images-content--how .section__images-container--how .section__images--how, .article .section__description .section__container--how .section__images-content--how .section__images-container--how .section__images--made, .article .section__description .section__container--how .section__images-content--how .section__images-container--made .section__images--how, .article .section__description .section__container--how .section__images-content--how .section__images-container--made .section__images--made, .article .section__description .section__container--how .section__images-content--made .section__images-container--how .section__images--how, .article .section__description .section__container--how .section__images-content--made .section__images-container--how .section__images--made, .article .section__description .section__container--how .section__images-content--made .section__images-container--made .section__images--how, .article .section__description .section__container--how .section__images-content--made .section__images-container--made .section__images--made, .article .section__description .section__container--made .section__images-content--how .section__images-container--how .section__images--how, .article .section__description .section__container--made .section__images-content--how .section__images-container--how .section__images--made, .article .section__description .section__container--made .section__images-content--how .section__images-container--made .section__images--how, .article .section__description .section__container--made .section__images-content--how .section__images-container--made .section__images--made, .article .section__description .section__container--made .section__images-content--made .section__images-container--how .section__images--how, .article .section__description .section__container--made .section__images-content--made .section__images-container--how .section__images--made, .article .section__description .section__container--made .section__images-content--made .section__images-container--made .section__images--how, .article .section__description .section__container--made .section__images-content--made .section__images-container--made .section__images--made {
   object-fit: cover;
-  width: 480px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   transition: translate 2s ease;
   animation: moveImages 15s alternate ease-in-out infinite;
 }
@@ -192,5 +187,144 @@ a {
   }
   100% {
     transform: translateX(-200%);
+  }
+}
+.article .section__description .section__container--how .section__images-container--how, .article .section__description .section__container--made .section__images-container--how {
+  border: 15px solid #19227c;
+}
+.article .section__description .section__container--how .section__content--made, .article .section__description .section__container--made .section__content--made {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.article .section__description .section__container--how .section__images-content--made, .article .section__description .section__container--made .section__images-content--made {
+  grid-column: 1/2;
+}
+.article .section__description .section__container--how .section__title--made, .article .section__description .section__container--made .section__title--made {
+  background-color: #005005;
+}
+.article .section__description .section__container--how .section__images-container--made, .article .section__description .section__container--made .section__images-container--made {
+  border: 10px solid #C6C6C6;
+}
+.article .section__description .section__container--how .section__list--made, .article .section__description .section__container--made .section__list--made {
+  display: grid;
+  position: relative;
+  top: -120px;
+  grid-template-columns: 100px;
+  grid-template-rows: 70px repeat(3, 30px);
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.article .section__description .section__container--how .section__list--made .section__list-title--made, .article .section__description .section__container--made .section__list--made .section__list-title--made {
+  font-size: 25px;
+  font-weight: 700;
+}
+.article .section__description .section__container--how .section__list--made .section__list-item--made, .article .section__description .section__container--made .section__list--made .section__list-item--made {
+  font-size: 19px;
+  margin: 0 0 0 20px;
+}
+.article .section__contact {
+  position: relative;
+}
+.article .section__contact .section__title--contact {
+  font-size: 40px;
+  background-image: linear-gradient(to left, #280052, #4B008E);
+  color: #fff;
+  padding: 20px 15px;
+  text-align: center;
+}
+.article .section__contact .card--contact {
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: 400px;
+  grid-gap: 140px;
+  justify-content: center;
+}
+.article .section__contact .card--contact .card__item--contact {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 400px;
+  height: 400px;
+}
+.article .section__contact .card--contact .card__item--contact::before {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  top: 0;
+  width: 400px;
+  height: 0;
+  transition: all 0.8s ease;
+  z-index: 13;
+}
+.article .section__contact .card--contact .card__item--contact:hover:before {
+  height: 400px;
+}
+.article .section__contact .card--contact .card__item--contact:hover .card__icon--contact.white {
+  opacity: 0;
+}
+.article .section__contact .card--contact .card__item--contact:hover .card__title--contact {
+  opacity: 1;
+  transition-delay: 0.8s;
+}
+.article .section__contact .card--contact .card__item--contact:hover .card__icon--contact.green {
+  opacity: 1;
+  animation: moveIcon 0.7s alternate ease;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+  transition: animation 0.5s ease;
+}
+.article .section__contact .card--contact .card__item--contact:hover .card__number--contact {
+  opacity: 1;
+  transition-delay: 1s;
+}
+.article .section__contact .card--contact .card__item--contact .card__icon--contact {
+  display: inline;
+  position: absolute;
+  margin: 100px 0;
+  width: 200px;
+  z-index: 15;
+}
+.article .section__contact .card--contact .card__item--contact .card__icon--contact.green {
+  transition: opacity 0.8s ease, animation 0.5s ease;
+  opacity: 0;
+}
+.article .section__contact .card--contact .card__item--contact .card__icon--contact.white {
+  transition: opacity 0.8s ease;
+  opacity: 1;
+}
+.article .section__contact .card--contact .card__item--contact .card__title--contact {
+  position: absolute;
+  opacity: 0;
+  bottom: 45px;
+  text-align: center;
+  font-size: 25px;
+  z-index: 20;
+  transition: ease 0.5s opacity;
+}
+.article .section__contact .card--contact .card__item--contact .card__number--contact {
+  position: absolute;
+  opacity: 0;
+  bottom: 20px;
+  font-size: 33px;
+  color: #000;
+  z-index: 21;
+  transition: opacity 0.5s ease;
+}
+.article .section__contact .card--contact .card__item--contact:first-child {
+  background-color: #007804;
+}
+.article .section__contact .card--contact .card__item--contact:last-child {
+  background-image: linear-gradient(45deg, #FFE600, #FF0000, #5F008C 70%);
+}
+
+@keyframes moveIcon {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25%);
   }
 }

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="inicio.css">
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Brazo robótico - RG</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+    <title>Mano Robótica - RG</title>
 </head>
 <body>
     <header class="header">
@@ -15,8 +15,8 @@
             </svg></a>
             
         <nav class="header__nav">
-            <a href="#how" class="header__elements">Características</a>
-            <a class="header__elements">¿Dónde comprar?</a>
+            <a href="#specs" class="header__elements">Características</a>
+            <a href="#contact" class="header__elements">¿Dónde hacer mi pedido?</a>
             <a class="header__elements">Sobre nosotros</a>
         </nav>
     </header>
@@ -24,25 +24,68 @@
         <section class="article__section-presentation">
             <img class="article__image-gauntlet" src="../images/mano-bordeada.png" alt="Mano Robótica" title="Mano Robótica">
             <div class="article__text-container">
-                <h1 class="article__title">BRAZO ROBÓTICO</h1>
+                <h1 class="article__title">MANO ROBÓTICA</h1>
                 <p class="article__slogan">Experimenta la sensación de tener una mano robótica con materiales simples que puedes encontrar en tu casa.</p>
             </div>
         </section>
         <section class="section__description">
-            <h2 class="section__title">Características</h2>
-            <div class="section__container-how" id="how">
-                <h3 class="section__title-how">¿Cómo funciona?</h3>
-                <p class="section__content-how">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque accusantium veritatis enim neque similique pariatur corrupti aliquam rem. Ab nihil iure fuga non, dolorum repellendus veritatis doloremque tempore totam deleniti!</p>
-                <p class="section__content-how">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque accusantium veritatis enim neque similique pariatur corrupti aliquam rem. Ab nihil iure fuga non, dolorum repellendus veritatis doloremque tempore totam deleniti!</p>
-                <div class="section__images-content-how">
-                    <div class="section__images-container-how">
-                        <img class="section__images-how" src="../images/mano-real.jpg">
-                        <img class="section__images-how" src="../images/bg-circuit.jpg">
-                        <img class="section__images-how" src="../images/zen 3.jpg">
+            <h2 class="section__title" id="specs">Características</h2>
+            <div class="section__container--how">
+                <p class="section__title--how">¿Cómo funciona?</p>
+                <p class="section__content--how">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque accusantium veritatis enim neque similique pariatur corrupti aliquam rem. Ab nihil iure fuga non, dolorum repellendus veritatis doloremque tempore totam deleniti!</p>
+                <p class="section__content--how">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque accusantium veritatis enim neque similique pariatur corrupti aliquam rem. Ab nihil iure fuga non, dolorum repellendus veritatis doloremque tempore totam deleniti!</p>
+                <div class="section__images-content--how">
+                    <div class="section__images-container--how">
+                        <img class="section__images--how" src="../images/mano-real.jpg">
+                        <img class="section__images--how" src="../images/bg-circuit.jpg">
+                        <img class="section__images--how" src="../images/zen 3.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="section__container--made">
+                <p class="section__title--made">¿De qué está hecho?</p>
+                <p class="section__content--made">Nuestras manos roboticas están fabricadas con materiales reciclados y simples.</p>
+                <ul class="section__list--made">
+                    <p class="section__list-title--made">Materiales:</p>
+                    <li class="section__list-item--made">
+                        Cartón.
+                    </li>
+                    <li class="section__list-item--made">
+                        Bombillas.
+                    </li>
+                    <li class="section__list-item--made">
+                        Hilo de barrilete.
+                    </li>
+                </ul>
+                <div class="section__images-content--made">
+                    <div class="section__images-container--made">
+                        <img class="section__images--made" src="../images/hilo de barrilete.jpg">
+                        <img class="section__images--made" src="../images/carton 2.jpg">
+                        <img class="section__images--made" src="../images/sorbetes 2.jpeg">
                     </div>
                 </div>
             </div>
         </section>
+        <section class="section__contact" id="contact">
+            <h3 class="section__title--contact">¿Dónde puedo hacer mi pedido?</h3>
+            <div class="card--contact">
+                <div class="card__item--contact">
+                    <img class="card__icon--contact green" src="svg/icono-whatsapp.svg" alt="Contáctanos por Whatsapp - RG">
+                    <img class="card__icon--contact white" src="svg/icono-whatsapp-white.svg" alt="Contáctanos por Whatsapp - RG">
+                    <h4 class="card__title--contact">Contáctanos por whatsapp</h4>
+                    <a class="card__number--contact" href="https://wa.me/541126547481" title="Haz click para enviarnos un mensaje">1126547481</a>
+                </div>
+                <div class="card__item--contact">
+                    <img class="card__icon--contact green" src="svg/icono-instagram.svg" alt="Contáctanos por Instagram - RG">
+                    <img class="card__icon--contact white" src="svg/icono-instagram-white.svg" alt="Contáctanos por Instagram - RG">
+                    <p class="card__title--contact">Disponible pronto...</p>
+                </div>
+            </div>
+                
+            
+                
+        </section>
+            
     </article>
 </body>
 </html>
