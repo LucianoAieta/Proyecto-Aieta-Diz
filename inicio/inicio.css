@@ -17,7 +17,7 @@ a {
   justify-content: space-between;
   align-items: center;
   height: var(--header-height);
-  background-color: #1a237e;
+  background-color: #000;
 }
 .header .header__logo {
   width: 100px;
@@ -55,7 +55,7 @@ a {
 .article {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 550px 1300px 650px;
+  grid-template-rows: 550px 1300px 650px 650px;
   flex-direction: column;
 }
 .article .article__section-presentation {
@@ -168,26 +168,6 @@ a {
   height: 100%;
   transition: translate 2s ease;
   animation: moveImages 15s alternate ease-in-out infinite;
-}
-@keyframes moveImages {
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(-100%);
-  }
-  66% {
-    transform: translateX(-100%);
-  }
-  76% {
-    transform: translateX(-200%);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
 }
 .article .section__description .section__container--how .section__images-container--how, .article .section__description .section__container--made .section__images-container--how {
   border: 15px solid #19227c;
@@ -319,6 +299,24 @@ a {
 .article .section__contact .card--contact .card__item--contact:last-child {
   background-image: linear-gradient(45deg, #FFE600, #FF0000, #5F008C 70%);
 }
+.article .section__about .section__title--about {
+  font-size: 40px;
+  color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 20px 15px;
+  text-align: center;
+}
+.article .section__about .section__container--about .section__container-title--about {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin: 80px 0 20px 0;
+}
+.article .section__about .section__container--about .section__container-text--about {
+  font-size: 20px;
+  text-align: center;
+}
 
 @keyframes moveIcon {
   0% {
@@ -326,5 +324,25 @@ a {
   }
   100% {
     transform: translateY(-25%);
+  }
+}
+@keyframes moveImages {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-100%);
+  }
+  76% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }
