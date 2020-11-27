@@ -177,11 +177,11 @@ a {
                     box-shadow: 0 3px 10px #666666;
     
                     .section__images--how, .section__images--made {
-                        object-fit: cover;
+                        object-fit: scale-down;
                         width: 100%;
                         height: 100%;
                         transition: translate 2s ease;
-                        animation: moveImages 15s alternate ease-in-out infinite;
+                        animation: moveImages 10s alternate ease-in-out infinite;
                     }
                 }
             }
