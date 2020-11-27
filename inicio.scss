@@ -1,7 +1,51 @@
-:root {
-    --header-height: 90px;
-    --header-width: 100vw;
-}
+    @media screen and (max-width: 1366px) and (max-height: 768px) {
+        :root {
+            // MEDIDAS HEADER
+            --nav-visibility: visible;
+    
+            // MEDIDAS ARTICLE
+    
+            // MEDIDAS PRESENTACION
+            --presentation-margin: 50px 120px;
+            --presentation-flex-direction: row;
+            --presentation-image-width: 550px;
+            --presentation-image-margin: 0 0 0 120px;
+
+            // MEDIDAS COMO FUNCIONA Y DE QUE ESTA HECHO
+            --how-container-grid-rows: 50% 50%;
+            --how-container-grid-columns: 20vh 30vh 30vh;
+            --how-images-content-grid-column-position: 2 / 3;
+            --how-images-content-grid-rows-position: 2 / 4;
+            --how-images-container-width: 480px;
+        }
+    }
+
+    @media screen and (max-width: 720px) and (max-height: 1280px) {
+    :root {
+        // MEDIDAS HEADER
+        --nav-visibility: hidden;
+
+        // MEDIDAS ARTICLE
+
+        --article-grid-rows: 700px 1600px 650px 650px;
+
+        // MEDIDAS PRESENTACION
+        --presentation-margin: 10px;
+        --presentation-flex-direction: column;
+        --presentation-image-width: 440px;
+        --presentation-image-margin: 0;
+
+        // MEDIDAS COMO FUNCIONA Y DE QUE ESTA HECHO
+        --how-container-grid-rows: 100px 300px 300px 400px;
+        --how-container-grid-columns: 100vw;
+        --how-images-content-grid-column-position: 1 / 3;
+        --how-images-content-grid-rows-position: 4 / 5;
+        --how-images-container-width: 400px;
+    }
+
+    //
+
+    }
 
 * {
     font-family: 'Space Grotesk', sans-serif;
@@ -18,7 +62,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: var(--header-height);
     background-color: #000;
     
     .header__logo {
@@ -31,6 +74,7 @@ a {
         justify-content: space-around;
         align-items: center;
         margin: 25px 75px;
+        visibility: var(--nav-visibility);
 
         .header__elements {
             position: relative;
@@ -62,39 +106,38 @@ a {
 .article {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 550px 1300px 650px 650px;
+    grid-template-rows: var(--article-grid-rows);
     flex-direction: column;
 
     .article__section-presentation {
         position: relative;
-        max-width: 100vw;
-        max-height: 100vh;
+        width: 90%;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: var(--presentation-flex-direction);
+        margin: var(--presentation-margin);
+
         .article__image-gauntlet {
-            position: absolute;
-            width: 750px;
-            top: 50px;
-            left: -40px;
+            height: var(--presentation-image-height);
+            width: var(--presentation-image-width);
             filter: drop-shadow(0px 4px 2px #000);
+            margin: var(--presentation-image-margin);
         }
         .article__text-container {
-            position: absolute;
             display: flex;
             flex-direction: column;
             height: 400px;
-            width: 500px;
             justify-items: center;
-            right: 200px;
-            top: 40px;
+            margin-top: 40px;
 
 
             .article__title {
-                position: absolute;
                 font-size: 40px;
             }
     
             .article__slogan {
-                position: absolute;
-                top: 70px;
+                width: 450px;
                 font-size: 25px;
                 color: #3B3B3B;
                 font-weight: 700;
@@ -103,9 +146,9 @@ a {
     }
 
     .section__description {
-        position: relative;
-        height: 550px;
         margin: 0;
+        display: flex;
+        flex-direction: column;
         .section__title {
             display: inline-block;
             position: relative;
@@ -124,9 +167,8 @@ a {
 
         .section__container--how, .section__container--made {
             display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 20vh 30vh 30vh;
-            position: relative;
+            grid-template-columns: var(--how-container-grid-columns);
+            grid-template-rows: var(--how-container-grid-rows);
             z-index: 10;
             width: 100%;
             margin: 0 0 40px 0;
@@ -134,7 +176,6 @@ a {
             .section__title--how, .section__title--made{
                 display: flex;
                 align-items: center;
-                grid-column: 1 / 3;
                 height: 90px;
                 font-size: 40px;
                 background-color: #004ba0;
@@ -144,16 +185,14 @@ a {
             
             .section__content--how, .section__content--made {
                 display: inline-block;
-                margin: -2px 0 0 0;
                 grid-column: 1 / 2;
                 background-color: #fff;
                 font-size: 20px;
-                padding: 30px 40px;
+                margin: 80px 40px;
                 color: #000;
             }
             .section__images-content--how, .section__images-content--made {
                 display: flex;
-                position: relative;
                 align-self: center;
                 justify-self: center;
                 align-items: center;
@@ -161,15 +200,15 @@ a {
                 background: #fff;
                 width: 100%;
                 height: 100%;
-                grid-column: 2 / 3;
-                grid-row: 2 / 4;
+                grid-column: var(--how-images-content-grid-column-position);
+                grid-row: var(--how-images-content-grid-rows-position);
                 margin: -1px 0 0 0;
                 padding-bottom: 3px;
                 z-index: 1;
 
                 .section__images-container--how, .section__images-container--made {
                     display: flex;
-                    width: 480px;
+                    width: var(--how-images-container-width);
                     height: 300px;
                     align-items: center;
                     overflow: hidden;
