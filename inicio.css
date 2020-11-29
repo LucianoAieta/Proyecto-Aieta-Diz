@@ -1,30 +1,104 @@
 @media screen and (max-width: 1366px) and (max-height: 768px) {
   :root {
     --nav-visibility: visible;
-    --presentation-margin: 50px 120px;
+    --article-grid-rows: 700px 1400px 600px 650px;
+    --presentation-margin: 50px 120px 90px 0;
     --presentation-flex-direction: row;
     --presentation-image-width: 550px;
-    --presentation-image-margin: 0 0 0 120px;
-    --how-container-grid-rows: 50% 50%;
-    --how-container-grid-columns: 20vh 30vh 30vh;
+    --presentation-image-margin: 0 0 0 -10em;
+    --presentation-slogan-width: 20em;
+    --section-title-font-size: 60px;
+    --section-title-width: 40vw;
+    --how-title-font-size: 3em;
+    --how-title-grid-column-position: 1 / 3;
+    --how-container-grid-columns: 50% 50%;
+    --how-container-grid-rows: 20vh 30vh 30vh;
     --how-images-content-grid-column-position: 2 / 3;
     --how-images-content-grid-rows-position: 2 / 4;
     --how-images-container-width: 480px;
+    --how-images-container-height: 90%;
+    --how-content-margin: 50px 40px;
+    --made-content-grid-column-position: 2 / 3;
+    --made-content-grid-row-position: 2 / 3;
+    --made-images-content-grid-column-position: 1 / 2;
+    --made-images-content-grid-row-position: 2 / 4;
+    --made-list-grid-column-position: 2 / 3;
+    --made-list-grid-row-position: 3 / 4;
+    --made-list-margin: -40px 20px;
+    --contact-card-grid-template-rows: 400px;
+    --contact-card-grid-template-column: 400px 400px;
+    --contact-card-scale: scale(1);
+    --contact-card-grid-gap: 150px;
   }
 }
 @media screen and (max-width: 720px) and (max-height: 1280px) {
   :root {
     --nav-visibility: hidden;
-    --article-grid-rows: 700px 1600px 650px 650px;
-    --presentation-margin: 10px;
+    --article-grid-rows: 700px 2200px 1200px 650px;
+    --presentation-margin: 0;
     --presentation-flex-direction: column;
     --presentation-image-width: 440px;
-    --presentation-image-margin: 0;
-    --how-container-grid-rows: 100px 300px 300px 400px;
+    --presentation-image-margin: 0 auto;
+    --presentation-slogan-width: 70%;
+    --section-title-font-size: 45px;
+    --section-title-width: 60vw;
+    --how-title-font-size: 2em;
+    --how-title-grid-column-position: 1 / 2;
+    --how-container-grid-rows: 10% 30% 30% 30%;
     --how-container-grid-columns: 100vw;
     --how-images-content-grid-column-position: 1 / 3;
     --how-images-content-grid-rows-position: 4 / 5;
     --how-images-container-width: 400px;
+    --how-images-container-height: 90%;
+    --how-content-margin: 50px 40px;
+    --made-content-grid-column-position: 1 / 2;
+    --made-content-grid-row-position: 2 / 3;
+    --made-images-content-grid-column-position: 1 / 2;
+    --made-images-content-grid-row-position: 4 / 5;
+    --made-list-grid-column-position: 1 / 2;
+    --made-list-grid-row-position: 2 / 3;
+    --made-list-margin: 130px 0;
+    --contact-card-scale: scale(.9);
+    --contact-card-grid-gap: 100px;
+    --contact-card-grid-template-rows: 400px 400px;
+    --contact-card-grid-template-column: 400px;
+  }
+}
+@media screen and (max-width: 720px) and (max-height: 1280px) and (max-width: 480px) and (max-height: 680px) {
+  :root {
+    --nav-visibility: hidden;
+    --article-grid-rows: 700px 2000px 950px 650px;
+    --presentation-margin: 0;
+    --presentation-flex-direction: column;
+    --presentation-image-width: 90%;
+    --presentation-image-margin: 0 auto;
+    --presentation-slogan-width: 90%;
+    --section-title-font-size: 1.7em;
+    --section-title-width: 60vw;
+    --how-title-font-size: 2em;
+    --how-title-grid-column-position: 1 / 2;
+    --how-container-grid-rows: 10% 30% 20% 40%;
+    --how-container-grid-columns: 100vw;
+    --how-content-grid-column-position: 1 / 3;
+    --how-images-content-grid-rows-position: 4 / 5;
+    --how-images-content-grid-column-position: 1 / 2;
+    --how-images-container-width: 100%;
+    --how-images-container-height: 90%;
+    --how-content-margin: 50px 20px;
+    --made-content-grid-column-position: 1 / 2;
+    --made-content-grid-row-position: 2 / 3;
+    --made-images-content-grid-column-position: 1 / 2;
+    --made-images-content-grid-row-position: 4 / 5;
+    --made-list-grid-column-position: 1 / 2;
+    --made-list-grid-row-position: 2 / 3;
+    --made-list-margin: 130px 0 -50px 0;
+    --contact-card-scale: scale(.7);
+    --contact-card-grid-template-rows: 400px 400px;
+    --contact-card-grid-template-column: 400px;
+    --contact-card-grid-gap: 50px;
+  }
+  :root .card__item--contact {
+    margin-top: -150px;
   }
 }
 * {
@@ -41,6 +115,7 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: #000;
+  max-width: 100vw;
 }
 .header .header__logo {
   width: 100px;
@@ -86,7 +161,6 @@ a {
   position: relative;
   width: 90%;
   display: flex;
-  justify-content: center;
   flex-direction: var(--presentation-flex-direction);
   margin: var(--presentation-margin);
 }
@@ -101,31 +175,37 @@ a {
   flex-direction: column;
   height: 400px;
   justify-items: center;
-  margin-top: 40px;
+  margin: 40px auto 0 auto;
 }
 .article .article__section-presentation .article__text-container .article__title {
   font-size: 40px;
+  display: inline;
+  text-align: center;
 }
 .article .article__section-presentation .article__text-container .article__slogan {
-  width: 450px;
-  font-size: 25px;
+  width: var(--presentation-slogan-width);
+  font-size: 1.3em;
   color: #3B3B3B;
   font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
 }
 .article .section__description {
-  margin: 0;
+  margin: 50px 0 0 0;
   display: flex;
   flex-direction: column;
 }
 .article .section__description .section__title {
   display: inline-block;
   position: relative;
+  width: var(--section-title-width);
   left: 50%;
   top: 20px;
+  margin: 0 0 -20px 0;
   border-radius: 20px 20px 0 0;
   transform: translateX(-50%);
-  font-size: 60px;
-  margin-bottom: -20px;
+  font-size: var(--section-title-font-size);
+  text-align: center;
   color: #fff;
   background-color: #00004f;
   padding: 15px;
@@ -136,23 +216,25 @@ a {
   grid-template-rows: var(--how-container-grid-rows);
   z-index: 10;
   width: 100%;
-  margin: 0 0 40px 0;
+  margin: 30px 0 60px 0;
 }
 .article .section__description .section__container--how .section__title--how, .article .section__description .section__container--how .section__title--made, .article .section__description .section__container--made .section__title--how, .article .section__description .section__container--made .section__title--made {
   display: flex;
+  margin: 0;
   align-items: center;
   height: 90px;
-  font-size: 40px;
+  font-size: var(--how-title-font-size);
   background-color: #004ba0;
   color: #fff;
-  padding-left: 20px;
+  grid-column: var(--how-title-grid-column-position);
+  padding-left: 0.5rem;
 }
 .article .section__description .section__container--how .section__content--how, .article .section__description .section__container--how .section__content--made, .article .section__description .section__container--made .section__content--how, .article .section__description .section__container--made .section__content--made {
   display: inline-block;
-  grid-column: 1/2;
+  grid-column: var(--how-content-grid-column-position);
   background-color: #fff;
   font-size: 20px;
-  margin: 80px 40px;
+  margin: var(--how-content-margin);
   color: #000;
 }
 .article .section__description .section__container--how .section__images-content--how, .article .section__description .section__container--how .section__images-content--made, .article .section__description .section__container--made .section__images-content--how, .article .section__description .section__container--made .section__images-content--made {
@@ -173,43 +255,44 @@ a {
 .article .section__description .section__container--how .section__images-content--how .section__images-container--how, .article .section__description .section__container--how .section__images-content--how .section__images-container--made, .article .section__description .section__container--how .section__images-content--made .section__images-container--how, .article .section__description .section__container--how .section__images-content--made .section__images-container--made, .article .section__description .section__container--made .section__images-content--how .section__images-container--how, .article .section__description .section__container--made .section__images-content--how .section__images-container--made, .article .section__description .section__container--made .section__images-content--made .section__images-container--how, .article .section__description .section__container--made .section__images-content--made .section__images-container--made {
   display: flex;
   width: var(--how-images-container-width);
-  height: 300px;
   align-items: center;
   overflow: hidden;
   z-index: 20;
-  box-shadow: 0 3px 10px #666666;
 }
 .article .section__description .section__container--how .section__images-content--how .section__images-container--how .section__images--how, .article .section__description .section__container--how .section__images-content--how .section__images-container--how .section__images--made, .article .section__description .section__container--how .section__images-content--how .section__images-container--made .section__images--how, .article .section__description .section__container--how .section__images-content--how .section__images-container--made .section__images--made, .article .section__description .section__container--how .section__images-content--made .section__images-container--how .section__images--how, .article .section__description .section__container--how .section__images-content--made .section__images-container--how .section__images--made, .article .section__description .section__container--how .section__images-content--made .section__images-container--made .section__images--how, .article .section__description .section__container--how .section__images-content--made .section__images-container--made .section__images--made, .article .section__description .section__container--made .section__images-content--how .section__images-container--how .section__images--how, .article .section__description .section__container--made .section__images-content--how .section__images-container--how .section__images--made, .article .section__description .section__container--made .section__images-content--how .section__images-container--made .section__images--how, .article .section__description .section__container--made .section__images-content--how .section__images-container--made .section__images--made, .article .section__description .section__container--made .section__images-content--made .section__images-container--how .section__images--how, .article .section__description .section__container--made .section__images-content--made .section__images-container--how .section__images--made, .article .section__description .section__container--made .section__images-content--made .section__images-container--made .section__images--how, .article .section__description .section__container--made .section__images-content--made .section__images-container--made .section__images--made {
-  object-fit: scale-down;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   transition: translate 2s ease;
   animation: moveImages 10s alternate ease-in-out infinite;
 }
 .article .section__description .section__container--how .section__images-container--how, .article .section__description .section__container--made .section__images-container--how {
-  border: 15px solid #19227c;
+  border: 15px solid #000000;
+  box-shadow: 0 0 4px 4px #1553A7;
 }
 .article .section__description .section__container--how .section__content--made, .article .section__description .section__container--made .section__content--made {
-  grid-column: 2/3;
-  grid-row: 2/3;
+  grid-column: var(--made-content-grid-column-position);
+  grid-row: var(--made-content-grid-row-position);
 }
 .article .section__description .section__container--how .section__images-content--made, .article .section__description .section__container--made .section__images-content--made {
-  grid-column: 1/2;
+  grid-column: var(--made-images-content-grid-column-position);
+  grid-row: var(--made-images-content-grid-row-position);
 }
 .article .section__description .section__container--how .section__title--made, .article .section__description .section__container--made .section__title--made {
   background-color: #005005;
 }
 .article .section__description .section__container--how .section__images-container--made, .article .section__description .section__container--made .section__images-container--made {
-  border: 10px solid #C6C6C6;
+  border: 10px solid #000;
+  height: var(--how-images-container-height);
+  box-shadow: 0 0 4px 4px #138C07;
 }
 .article .section__description .section__container--how .section__list--made, .article .section__description .section__container--made .section__list--made {
   display: grid;
-  position: relative;
-  top: -120px;
+  margin: var(--made-list-margin);
   grid-template-columns: 100px;
   grid-template-rows: 70px repeat(3, 30px);
-  grid-column: 2/3;
-  grid-row: 3/4;
+  grid-column: var(--made-list-grid-column-position);
+  grid-row: var(--made-list-grid-row-position);
 }
 .article .section__description .section__container--how .section__list--made .section__list-title--made, .article .section__description .section__container--made .section__list--made .section__list-title--made {
   font-size: 25px;
@@ -232,9 +315,10 @@ a {
 .article .section__contact .card--contact {
   display: grid;
   background-color: #fff;
-  grid-template-columns: 400px 400px;
-  grid-template-rows: 400px;
-  grid-gap: 140px;
+  grid-template-columns: var(--contact-card-grid-template-column);
+  grid-template-rows: var(--contact-card-grid-template-rows);
+  grid-gap: var(--contact-card-grid-gap);
+  transform: var(--contact-card-scale);
   justify-content: center;
 }
 .article .section__contact .card--contact .card__item--contact {
